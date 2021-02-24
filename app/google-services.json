@@ -1,0 +1,28 @@
+{
+  "Diagnosis": [
+    {
+      "name": "Common Cold",
+      "description": "Common cold can be caused by many different types of viruses. The condition is usually harmless and symptoms usually resolve within two weeks.\n ",
+      "Symptoms": [ "Fever", "Chills", "Cough", "Sore throat", "Congestion", "Runny Nose", "Sneezing",
+        "Post-Nasal Drip", "Watery Eyes"
+      ]
+    },
+    {
+      "name": "Flu",
+      "description": "Flu is a contagious respiratory illness caused by influenza viruses that infect the nose, throat, and sometimes the lungs. It can cause mild to severe illness, and at times can lead to death. The best way to prevent flu is by getting a flu vaccine each year.\n",
+      "Symptoms": [ "Cough",  "Shortness of breath", "Fatigue", "Sore throat", "Runny Nose",
+        "Muscle Pain", "Headache", "Vomiting"
+      ]
+    },
+    {
+      "name": "COVID-19",
+      "description": "COVID-19 is a disease caused by SARS-CoV-2 that can trigger what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses, nose, and throat) or lower respiratory tract (windpipe and lungs). It spreads the same way other coronaviruses do, mainly through person-to-person contact\n",
+      "Symptoms" : [ "Fever", "Cough", "Shortness of Breath", "Fatigue", "Muscle Aches", "Head Ache",
+        "Loss of Taste", "Sore Throat", "Congestion", "Nausea",  "Diarrhea"
+      ]
+
+    }
+  ],
+
+  "configuration_version": "1"
+}
