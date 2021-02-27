@@ -1,28 +1,77 @@
 {
-  "Diagnosis": [
+  "project_info": {
+    "project_number": "928892468429",
+    "firebase_url": "https://medicalapp-d588d-default-rtdb.firebaseio.com",
+    "project_id": "medicalapp-d588d",
+    "storage_bucket": "medicalapp-d588d.appspot.com"
+  },
+  "client": [
     {
-      "name": "Common Cold",
-      "description": "Common cold can be caused by many different types of viruses. The condition is usually harmless and symptoms usually resolve within two weeks.\n ",
-      "Symptoms": [ "Fever", "Chills", "Cough", "Sore throat", "Congestion", "Runny Nose", "Sneezing",
-        "Post-Nasal Drip", "Watery Eyes"
-      ]
+      "client_info": {
+        "mobilesdk_app_id": "1:928892468429:android:d97d82f07716ce4b397d84",
+        "android_client_info": {
+          "package_name": "com.example.medical_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928892468429-bhm7tc140lgosud5hl6rv90o972e8nu6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQtM2N-hzDnhvLe39Lrmjz48lzhOLutz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928892468429-bhm7tc140lgosud5hl6rv90o972e8nu6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     },
     {
-      "name": "Flu",
-      "description": "Flu is a contagious respiratory illness caused by influenza viruses that infect the nose, throat, and sometimes the lungs. It can cause mild to severe illness, and at times can lead to death. The best way to prevent flu is by getting a flu vaccine each year.\n",
-      "Symptoms": [ "Cough",  "Shortness of breath", "Fatigue", "Sore throat", "Runny Nose",
-        "Muscle Pain", "Headache", "Vomiting"
-      ]
-    },
-    {
-      "name": "COVID-19",
-      "description": "COVID-19 is a disease caused by SARS-CoV-2 that can trigger what doctors call a respiratory tract infection. It can affect your upper respiratory tract (sinuses, nose, and throat) or lower respiratory tract (windpipe and lungs). It spreads the same way other coronaviruses do, mainly through person-to-person contact\n",
-      "Symptoms" : [ "Fever", "Cough", "Shortness of Breath", "Fatigue", "Muscle Aches", "Head Ache",
-        "Loss of Taste", "Sore Throat", "Congestion", "Nausea",  "Diarrhea"
-      ]
-
+      "client_info": {
+        "mobilesdk_app_id": "1:928892468429:android:7e288e5ac46d2bf0397d84",
+        "android_client_info": {
+          "package_name": "com.example.samplefirebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "928892468429-5r8r7f52eqdjkbe6degs0020oir0v162.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.samplefirebase",
+            "certificate_hash": "d53f940338436f5ba736838b3f7c3e1dbf92ab66"
+          }
+        },
+        {
+          "client_id": "928892468429-bhm7tc140lgosud5hl6rv90o972e8nu6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQtM2N-hzDnhvLe39Lrmjz48lzhOLutz4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "928892468429-bhm7tc140lgosud5hl6rv90o972e8nu6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
     }
   ],
-
   "configuration_version": "1"
 }
