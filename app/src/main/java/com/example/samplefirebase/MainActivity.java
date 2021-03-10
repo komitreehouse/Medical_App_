@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     EditText input_symptoms_text;
     TextView diagnosis_text;
     String final_diagnosis;
-
+    ArrayList<String> symptomsArray;
     Button submit_symptoms;
 
     @Override
@@ -104,6 +104,14 @@ public class MainActivity extends AppCompatActivity {
                             final_diagnosis = diagnosis_text.getText().toString();
                             // would have to convert input_symptoms to an array of strings
                             ArrayList<String> input_array = convertToArrayOfStrings(input_symptoms);
+//
+//                            for (int i = 0; i < symptomsArray.size(); i++) {
+//                                reff.orderByChild("Diagnoses.json").startAt(symptomsArray.get(i)).endAt("\uf8ff");
+//                            }
+
+
+
+
 
                             for (int diagnosis_index = 0; diagnosis_index <= 2; diagnosis_index++) {
                                 String diagnosis = snapshot.child(String.valueOf(diagnosis_index)).child("name").getValue().toString();
@@ -185,9 +193,16 @@ public class MainActivity extends AppCompatActivity {
         /**
          * change so that it is each symptom comma seperated
          */
-        ArrayList<String> array = new ArrayList<>();
-        array.add(input_symptoms);
-        return array;
+//        input_symptoms = input_symptoms_text.getText().toString();
+//        Log.d(input_symptoms);
+        String[] input_symptoms_array = input_symptoms.split(",");
+        symptomsArray = new ArrayList<>();
+        for (int i = 0; i < input_symptoms_array.length; i++) {
+            symptomsArray.add(input_symptoms_array[i]);
+        }
+        System.out.println(input_symptoms);
+//        array.add(input_symptoms);
+        return symptomsArray;
 
     }
 
