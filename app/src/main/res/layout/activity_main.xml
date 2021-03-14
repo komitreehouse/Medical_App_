@@ -1,49 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cancel_button"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DECFF1"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <TextView
+        android:id="@+id/symptom5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="122dp"
-        android:orientation="vertical">
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="16dp"
+        android:text="symptom 1"
+        app:layout_constraintStart_toEndOf="@+id/symptom4"
+        app:layout_constraintTop_toBottomOf="@+id/symptom2" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Enter Symptoms Comma Seperated"
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="175dp" />
+    <TextView
+        android:id="@+id/symptom6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="16dp"
+        android:text="symptom 1"
+        app:layout_constraintStart_toEndOf="@+id/symptom5"
+        app:layout_constraintTop_toBottomOf="@+id/symptom3" />
 
-        <EditText
-            android:id="@+id/input_symptoms_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Symptoms "
-            tools:layout_editor_absoluteX="61dp"
-            tools:layout_editor_absoluteY="230dp" />
+    <TextView
+        android:id="@+id/symptom4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="symptom 1"
+        app:layout_constraintStart_toStartOf="@+id/symptom1"
+        app:layout_constraintTop_toBottomOf="@+id/symptom1" />
 
-        <Button
-            android:id="@+id/submit_symptoms"
+    <TextView
+        android:id="@+id/WelcomeMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#D5C2ED"
+        android:text="How are you feeling today?"
+        android:textColor="#F6F6F6"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/WeCare"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <ImageButton
+        android:id="@+id/BackButton"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:rotation="180"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?attr/homeAsUpIndicator" />
+
+    <ImageButton
+        android:id="@+id/MenuButton"
+        android:layout_width="48dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="?android:attr/listChoiceIndicatorMultiple" />
+
+    <TextView
+        android:id="@+id/WeCare"
+        android:layout_width="108dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginLeft="78dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginRight="78dp"
+        android:text="WeCare"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/BackButton"
+        app:layout_constraintStart_toEndOf="@+id/MenuButton"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="338dp"
+        android:layout_height="422dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginRight="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/symptom5">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="submit" />
+            android:orientation="vertical" />
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/possible_diagnosis"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
+    <Button
+        android:id="@+id/TypeSymptoms"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginRight="55dp"
+        android:text="Start typing your symptoms (up to 6)"
+        android:textSize="10sp"
+        app:backgroundTint="#D5C2ED"
+        app:iconTint="#FBFBFB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.588"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/WelcomeMessage" />
 
-    </LinearLayout>
+    <TextView
+        android:id="@+id/symptom1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="symptom 1"
+        app:layout_constraintStart_toStartOf="@+id/TypeSymptoms"
+        app:layout_constraintTop_toBottomOf="@+id/TypeSymptoms" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/symptom2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="16dp"
+        android:text="symptom 1"
+        app:layout_constraintStart_toEndOf="@+id/symptom1"
+        app:layout_constraintTop_toBottomOf="@+id/TypeSymptoms" />
+
+    <TextView
+        android:id="@+id/symptom3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginTop="16dp"
+        android:text="symptom 1"
+        app:layout_constraintStart_toEndOf="@+id/symptom2"
+        app:layout_constraintTop_toBottomOf="@+id/TypeSymptoms" />
+
+    <Button
+        android:id="@+id/delete_symptom"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="12dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="#FFFFFF"
+        android:insetTop="2dp"
+        android:insetBottom="2dp"
+        android:text="X"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#020202"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        android:onClick= "delete_symptom"
+        app:backgroundTint="#FDFDFD"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/symptom1"
+        app:layout_constraintStart_toEndOf="@+id/symptom1"
+        app:layout_constraintTop_toTopOf="@+id/symptom1"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/delete_symptom2"
+        style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+        android:layout_width="12dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:background="#FFFFFF"
+        android:insetTop="2dp"
+        android:insetBottom="2dp"
+        android:onClick="delete_symptom"
+        android:text="X"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        android:textColor="#020202"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:backgroundTint="#FDFDFD"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/symptom1"
+        app:layout_constraintStart_toEndOf="@+id/symptom4"
+        app:layout_constraintTop_toTopOf="@+id/symptom4"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
