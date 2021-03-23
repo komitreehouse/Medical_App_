@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> symptomsArray;
     Button submit_symptoms;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -208,5 +209,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void display(String text) {
         Toast.makeText(MainActivity.this, text, Toast.LENGTH_LONG).show();
+        System.out.println ();
     }
 }
