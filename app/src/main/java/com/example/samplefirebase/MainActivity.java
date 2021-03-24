@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     String final_diagnosis;
     ArrayList<String> symptomsArray;
     Button submit_symptoms;
+    Button clear_button;
 
 
     @Override
@@ -75,9 +76,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        input_symptoms_text = (EditText)findViewById(R.id.input_symptoms_text);
+        input_symptoms_text = (EditText)findViewById(R.id.input_symptoms);
         submit_symptoms = (Button) findViewById(R.id.submit_symptoms);
         diagnosis_text = (TextView) findViewById(R.id.possible_diagnosis);
+        clear_button = (Button) findViewById(R.id.clear_text); //button to clear text inside edit text
+
+        clear_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                input_symptoms_text.getText().clear();
+            }
+        });
 
 
         submit_symptoms.setOnClickListener(new View.OnClickListener() {
@@ -100,7 +109,6 @@ public class MainActivity extends AppCompatActivity {
                              */
 
                             ArrayList<Double> percentages = new ArrayList<>();
-
                             input_symptoms = input_symptoms_text.getText().toString();
                             final_diagnosis = diagnosis_text.getText().toString();
                             // would have to convert input_symptoms to an array of strings
@@ -209,6 +217,5 @@ public class MainActivity extends AppCompatActivity {
 
     private void display(String text) {
         Toast.makeText(MainActivity.this, text, Toast.LENGTH_LONG).show();
-        System.out.println ();
     }
 }
